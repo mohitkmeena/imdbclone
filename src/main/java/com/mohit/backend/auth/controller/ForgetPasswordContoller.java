@@ -22,7 +22,7 @@ import com.mohit.backend.dto.MailBody;
 import com.mohit.backend.service.EmailService;
 import com.mohit.backend.auth.exception.ForgetPasswordException;
 @RestController
-@RequestMapping("/api/v1/passwd")
+@RequestMapping("/api/v1/passwd/")
 public class ForgetPasswordContoller {
     @Autowired
     private PasswordEncoder passwordEncoder;

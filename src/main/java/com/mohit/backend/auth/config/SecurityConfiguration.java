@@ -30,6 +30,7 @@ public class SecurityConfiguration {
     http.csrf(customizer->customizer.disable())
     .authorizeHttpRequests(auth->auth
                         .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/api/v1/passwd/**").permitAll()
                         .anyRequest().authenticated())
     .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
     .addFilterBefore(authFilterService, UsernamePasswordAuthenticationFilter.class);
